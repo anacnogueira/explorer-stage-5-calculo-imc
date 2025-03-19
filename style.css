@@ -16,7 +16,8 @@
   --bg-input: #dce2e9;
   --tt-placeholder: rgba(73, 80, 87, 0.5);
   --tt-button: #ffffff;
-  --bg-button: #02799d;
+  --bg-button: rgb(9, 86, 29);
+  --bg-button-hover: rgb(3, 35, 11);
   --bg-error: #f03e3e;
   --tt-error: #ffffff;
 }
@@ -24,7 +25,13 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--bg-body);
+}
+
+body,
+input,
+button {
   font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 .container {
@@ -34,7 +41,7 @@ body {
 }
 
 .card {
-  padding: 4.8rem 6.4rem 6.4rem;
+  padding: 4.8rem 5.4rem 5.4rem;
   background-color: #fff;
   max-width: 42.8rem;
   margin-inline: auto;
@@ -47,6 +54,14 @@ body {
   font-size: 3.2rem;
   line-height: 4rem;
   color: var(--tt-heading);
+}
+
+.container {
+  padding: 1.6rem;
+}
+
+form {
+  width: 30rem;
 }
 
 form h1 {
@@ -79,4 +94,25 @@ form input::placeholder {
 
 .input-wrapper + .input-wrapper {
   margin-top: 1.6rem;
+}
+
+button {
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  width: 100%;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: var(--bg-button);
+  color: var(--tt-button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--bg-button-hover);
 }
