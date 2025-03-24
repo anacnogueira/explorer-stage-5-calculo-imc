@@ -1,6 +1,6 @@
 import { Modal } from "./modal.js";
 import { AlertError } from "./alert-error.js";
-import { calculateIMC, notNumber } from "./imc.js";
+import { calculateIMC, notNumber } from "./utils.js";
 
 // variaveis
 const form = document.querySelector("form");
@@ -23,6 +23,13 @@ form.onsubmit = (event) => {
   AlertError.close();
 
   displayResultMessage(calculateIMC(weight, height));
+};
+
+inputWeight.oninput = () => {
+  AlertError.close();
+};
+inputHeight.oninput = () => {
+  AlertError.close();
 };
 
 function displayResultMessage(result) {
